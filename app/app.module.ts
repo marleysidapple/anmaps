@@ -1,6 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { RouterModule, Routes } from '@angular/router'; 
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from "./app.routing";
 
@@ -13,9 +14,14 @@ import { TaskComponent } from './module/task/task.component';
 import { TodoComponent } from './module/todo/todo.component';
 
 
+import { TodoService } from './module/todo/todo.service';
+
+
+
 @NgModule({
-  imports:      [ BrowserModule, AppRoutingModule],
+  imports:      [ BrowserModule, AppRoutingModule, HttpModule],
   declarations: [ AppComponent, HeaderComponent, SidebarComponent, HomeComponent, TaskComponent, TodoComponent],
+  providers: 	[ TodoService ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
