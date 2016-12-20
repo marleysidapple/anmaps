@@ -7,7 +7,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   imports:      [ BrowserModule ],
-  declarations: [ AppComponent, HeaderComponent, SidebarComponent ],
+  declarations: [ AppComponent, HeaderComponent, SidebarComponen],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
