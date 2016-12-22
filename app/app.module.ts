@@ -9,6 +9,7 @@ import { AppComponent }  from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
+import { AuthComponent } from './module/auth/auth.component';
 import { HomeComponent } from './module/home/home.component';
 import { TaskComponent } from './module/task/task.component';
 import { TodoComponent } from './module/todo/todo.component';
@@ -20,7 +21,7 @@ import { TodoService } from './module/todo/todo.service';
 
 @NgModule({
   imports:      [ BrowserModule, AppRoutingModule, HttpModule],
-  declarations: [ AppComponent, HeaderComponent, SidebarComponent, HomeComponent, TaskComponent, TodoComponent],
+  declarations: [ AppComponent, HeaderComponent, SidebarComponent, HomeComponent, TaskComponent, TodoComponent, AuthComponent],
   providers: 	[ TodoService ],
   bootstrap:    [ AppComponent ]
 })
