@@ -3,6 +3,9 @@
 		<div class="panel panel-default">
 		  <div class="panel-heading">Please Login</div>
 			  <div class="panel-body">
+			  <div *ngIf="errMessage" class="alert alert-danger">
+			  	{{ errMessage }}
+			  </div>
 			    <form [formGroup] = "auth" (ngSubmit) = "validateUser(auth.value)">
 				  <div class="form-group">
 				    <label for="exampleInputEmail1">Email address</label>
