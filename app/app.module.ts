@@ -2,6 +2,7 @@ import { NgModule }      from '@angular/core';
 import { RouterModule, Routes } from '@angular/router'; 
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from "./app.routing";
 
@@ -16,13 +17,14 @@ import { TodoComponent } from './module/todo/todo.component';
 
 
 import { TodoService } from './module/todo/todo.service';
+import { AuthService } from './module/auth/auth.service';
 
 
 
 @NgModule({
-  imports:      [ BrowserModule, AppRoutingModule, HttpModule],
+  imports:      [ BrowserModule, AppRoutingModule, HttpModule, FormsModule, ReactiveFormsModule],
   declarations: [ AppComponent, HeaderComponent, SidebarComponent, HomeComponent, TaskComponent, TodoComponent, AuthComponent],
-  providers: 	[ TodoService ],
+  providers: 	[ TodoService, AuthService ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
