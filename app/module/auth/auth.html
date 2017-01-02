@@ -1,26 +1,50 @@
-<div class="row login-holder">
-	<div class="col-sm-4 col-sm-offset-4">
-		<div class="panel panel-default">
-		  <div class="panel-heading">Please Login</div>
-			  <div class="panel-body">
-			  <div *ngIf="errMessage" class="alert alert-danger">
-			  	{{ errMessage }}
-			  </div>
-			    <form [formGroup] = "auth" (ngSubmit) = "validateUser(auth.value)">
-				  <div class="form-group">
-				    <label for="exampleInputEmail1">Email address</label>
-				    <input type="email" class="form-control" [formControl] = "auth.controls['email']">
-				  </div>
-
-				  <div class="form-group">
-				    <label for="exampleInputPassword1">Password</label>
-				    <input type="password" class="form-control" [formControl]="auth.controls['password']">
-				  </div>
-				 
-				
-				  <button [disabled]="!auth.valid" class="btn btn-default">Login</button>
-				</form>
-			  </div>
-		</div>
-	</div>
-</div>
+  <div class="login-container login-v2">
+            
+            <div class="login-box animated fadeInDown">
+                <div class="login-body">
+                    <div class="login-title"><strong>Welcome</strong>, Please login.</div>
+                    <form  [formGroup] = "auth" (ngSubmit) = "validateUser(auth.value)" class="form-horizontal">
+                     <div *ngIf="errMessage" class="alert alert-danger">
+                        {{ errMessage }}
+                      </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <span class="fa fa-user"></span>
+                                </div>
+                                <input type="email" class="form-control" [formControl] = "auth.controls['email']" placeholder="Email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <span class="fa fa-lock"></span>
+                                </div>                                
+                                <input type="password" class="form-control" [formControl]="auth.controls['password']" placeholder="password">
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <button [disabled]="!auth.valid" class="btn btn-primary btn-lg btn-block">Login</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="login-footer">
+                    <div class="pull-left">
+                        &copy; 2015 AppName
+                    </div>
+                    <div class="pull-right">
+                        <a href="pages-login-v2.html#">About</a> |
+                        <a href="pages-login-v2.html#">Privacy</a> |
+                        <a href="pages-login-v2.html#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
