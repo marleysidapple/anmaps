@@ -3,11 +3,9 @@ import { Response } from '@angular/http';
 import { AuthService } from './../module/auth/auth.service';
 
 @Component({
-	selector: 'header',
-	template: `Welcome {{userDetail?.name}}<h4>This is header</h4>
-				<a routerLink='/dashboard/home' routerLinkActive='active'>Home</a>&nbsp;
-				<a routerLink='/dashboard/task' routerLinkActive='active'>Task</a>&nbsp;
-				<a routerLink='/dashboard/todo' routerLinkActive='active'>Todo</a>&nbsp;`
+	moduleId: module.id,
+	selector: 'my-header',
+	templateUrl: './header.html'
 })
 
 

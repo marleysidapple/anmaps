@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 
 
 @Component({
+	moduleId: module.id,
 	selector: 'sidebar',
-	template: `<h4>This is sidebar</h4>`
+	templateUrl: './sidebar.html'
 })
 
 
